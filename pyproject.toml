@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "Testing examples"
+version = "0.9.0"
+description = "A series of examples and tutorials on how to test"
+authors = ["Harold Cohen <me@harold-cohen.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10.6"
+dependency-injector = "^4.41.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.12.0"
+pylint = "=2.15.10"
+pytest = "7.2.1"
+pre-commit = "^2.21.0"
+autopep8 = "^2.0.1"
+pytest-mock = "^3.10.0"
+python-semantic-release = "^7.33.0"
+behave = "^1.2.6"
+PyHamcrest = "^2.0.4"
+pact-python = "1.3.9"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | build
+    | dist
+  )/
+)
+'''
+
+[tool.semantic_release]
+version_source = "commit"
+commit_changes = true
+version_variable = "pyproject.toml:version"
+hvcs = "github"
+upload_to_pypi = false
+upload_to_release = false
+
+[tool.isort]
+line_length = 120
+force_sort_within_sections = true
+include_trailing_comma = true
+multi_line_output = 3
+profile = "black"
