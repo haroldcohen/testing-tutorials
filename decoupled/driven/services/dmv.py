@@ -4,7 +4,7 @@ import urllib.parse
 
 import requests
 
-from decoupled.core.use_case.common.services.dmv_interface import DMVServiceGatewayInterface
+from decoupled.core.domain.common.interfaces.services.dmv_interface import DMVServiceGatewayInterface
 
 
 class DMVServiceGateway(DMVServiceGatewayInterface):  # pylint: disable=too-few-public-methods

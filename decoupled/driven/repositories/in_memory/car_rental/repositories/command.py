@@ -13,5 +13,6 @@ class CarRentalCommandInMemoryRepository(CarRentalCommandRepositoryInterface):
             entity=InMemoryCarRental(
                 id=car_rental.id,
                 car_id=car_rental.car_id,
+                end_date=car_rental.end_date,
             )
         )

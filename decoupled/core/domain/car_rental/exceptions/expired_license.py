@@ -1,0 +1,2 @@
+class CannotRentACarWithExpiredLicense(Exception):
+    pass
